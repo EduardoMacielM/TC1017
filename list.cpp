@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <numeric>
-#include <algorithm>
 #include <cmath>
 using namespace std;
 int main()
