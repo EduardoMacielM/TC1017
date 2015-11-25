@@ -16,10 +16,10 @@ int main (){
   float price;
   float priceav = 0.0;
 
-  ifstream read_file("93cars.dat.txt");
-  if (read_file.is_open()){
+  ifstream file("93cars.dat.txt");
+  if (file.is_open()){
     for (int i =0; i < 93; i++){
-        getline(read_file, Read);
+        getline(file, Read);
         midprice = Read.substr(42,4);
         istringstream value1(midprice);
         value1 >> price;
@@ -32,9 +32,9 @@ int main (){
         hwav = hwav + hw;
         priceav = priceav + price;
         cityav = cityav + city;
-        getline(read_file, Read);
+        getline(file, Read);
     }
-    read_file.close();
+    file.close();
   }else{
     cout << "Error 404: File not found" << endl;
   }
